@@ -1,0 +1,11 @@
+gensim==4.0.0
+python-Levenshtein
+unidecode
+optuna
+optuna-dashboard
+transformers
+tensorboard
+nltk
+moverscore
+pyemd
+sentencepiece
