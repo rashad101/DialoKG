@@ -27,9 +27,7 @@ from utils.args import (
 )
 from scripts.model import run_batch_generation_sample
 from utils.metrics import (
-    UnigramMetric, NGramDiversity,
-    CorpusNGramDiversity,
-    BLEU, BLEU2, METEOR, ROUGE, EntityF1
+    BLEU, EntityF1
 )
 from utils.data import write_generation_preds
 
@@ -74,19 +72,7 @@ def evaluate(args, eval_dataset, model, tokenizer, desc="") -> Dict:
     )
 
     metrics = [
-        UnigramMetric(metric="recall"),
-        UnigramMetric(metric="precision"),
-        NGramDiversity(n=1),
-        NGramDiversity(n=2),
-        NGramDiversity(n=3),
-        NGramDiversity(n=4),
-        CorpusNGramDiversity(n=1),
-        CorpusNGramDiversity(n=2),
-        CorpusNGramDiversity(n=3),
-        CorpusNGramDiversity(n=4),
         BLEU(dataset=args.dataset),
-        METEOR(),
-        ROUGE(),
         EntityF1(dataset=args.dataset)
     ]
 

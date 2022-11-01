@@ -1,5 +1,5 @@
 # DialoKG: Knowledge-Structure Aware Task-Oriented Dialogue Generation
-PyTorch code for NAACL 2022 paper: DialoKG: Knowledge-Structure Aware Task-Oriented Dialogue Generation [[PDF]](https://aclanthology.org/2022.findings-naacl.195.pdf).
+This repository contains PyTorch code for NAACL 2022 paper: DialoKG: Knowledge-Structure Aware Task-Oriented Dialogue Generation [[PDF]](https://aclanthology.org/2022.findings-naacl.195.pdf).
 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
@@ -14,8 +14,18 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
+### 🏋️ Training
+```shell
+python train.py --dataset <DATASET-NAME> --params_file config/gpt2/params.json --device cuda
+```
+Valid dataset names: **incar**, **camrest**, **woz2.1**
 
-### Citation
+### 🎯 Evaluation
+```shell
+
+```
+
+### 📝 Citation
 ```
 @inproceedings{rony-etal-2022-dialokg,
     title = "{D}ialo{KG}: Knowledge-Structure Aware Task-Oriented Dialogue Generation",
@@ -32,8 +42,8 @@ chmod +x setup.sh
     abstract = "Task-oriented dialogue generation is challenging since the underlying knowledge is often dynamic and effectively incorporating knowledge into the learning process is hard. It is particularly challenging to generate both human-like and informative responses in this setting. Recent research primarily focused on various knowledge distillation methods where the underlying relationship between the facts in a knowledge base is not effectively captured. In this paper, we go one step further and demonstrate how the structural information of a knowledge graph can improve the system{'}s inference capabilities. Specifically, we propose DialoKG, a novel task-oriented dialogue system that effectively incorporates knowledge into a language model. Our proposed system views relational knowledge as a knowledge graph and introduces (1) a structure-aware knowledge embedding technique, and (2) a knowledge graph-weighted attention masking strategy to facilitate the system selecting relevant information during the dialogue generation. An empirical evaluation demonstrates the effectiveness of DialoKG over state-of-the-art methods on several standard benchmark datasets.",
 }
 ```
-### License
+### 📜 License
 [MIT]()
 
-### Contact
+### 📪 Contact
 For further information, contact the corresponding author Md Rashad Al Hasan Rony ([email](mailto:rashad.research@gmail.com)).
