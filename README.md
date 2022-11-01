@@ -6,7 +6,7 @@ This repository contains PyTorch code for NAACL 2022 paper: DialoKG: Knowledge-S
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
-### Installation (anaconda)
+### ⚙️ Installation (anaconda)
 ```commandline
 conda create -n dialokg -y python=3.7 && source activate dialokg
 pip install -r requirements.txt
@@ -18,12 +18,16 @@ chmod +x setup.sh
 ```shell
 python train.py --dataset <DATASET-NAME> --params_file config/gpt2/params.json --device cuda
 ```
-Valid dataset names: **incar**, **camrest**, **woz2.1**
+Valid dataset names: **incar**, **camrest**, **woz2.1** .
 
 ### 🎯 Evaluation
 ```shell
-
+python eval.py --generate runs/dialokg-gpt2/<DATASET-NAME> --dataset <DATASET-NAME>  --generation_params_file config/gpt2/generation_params.json --eval_dataset test  --output_file outputs/<DATASET-NAME>-output.json --top_weights 7
 ```
+
+Note that:
+- the best parameters are reported in the paper.
+- reported results are obtained from distributed training.
 
 ### 📝 Citation
 ```
