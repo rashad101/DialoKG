@@ -16,6 +16,10 @@ chmod +x setup.sh
 
 ### 🏋️ Training
 ```shell
+# training using a single gpu
+python train.py --dataset <DATASET-NAME> --params_file config/gpt2/params.json --device cuda
+
+# training in a distributed setting
 python train.py --dataset <DATASET-NAME> --params_file config/gpt2/params.json --device cuda
 ```
 Valid dataset names: **incar**, **camrest**, **woz2.1** .
