@@ -20,7 +20,7 @@ chmod +x setup.sh
 python train.py --dataset <DATASET-NAME> --params_file config/gpt2/params.json --device cuda
 
 # training in a distributed setting
-python train.py --dataset <DATASET-NAME> --params_file config/gpt2/params.json --device cuda
+python -m torch.distributed.launch --dataset <DATASET-NAME> --params_file config/gpt2/params.json --device cuda
 ```
 Valid dataset names: **incar**, **camrest**, **woz2.1** .
 
