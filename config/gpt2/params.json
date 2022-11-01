@@ -2,7 +2,7 @@
     "dataset_args": {
       "history_max_utterances": 3,
       "history_max_tokens": 128,
-      "knowledge_max_tokens": 128
+      "knowledge_max_tokens": 384
     },
     "task": "generation",
     "model_name_or_path": "gpt2",
@@ -12,7 +12,7 @@
     "learning_rate": 6.25e-5,
     "adam_epsilon": 1e-8,
     "max_grad_norm": 1,
-    "num_train_epochs": 1,
+    "num_train_epochs": 30,
     "warmup_steps": 0,
     "fp16": "",
     "seed": 42
