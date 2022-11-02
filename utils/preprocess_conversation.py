@@ -128,8 +128,9 @@ def truncate_long_context(long_text):
 
 def compute_weights(dataset):
     dataroot = "data/"+dataset
-    #for datasplit in ["val", "test", "train"]:
-    for datasplit in ["train"]:
+    splits = ["val","test","train"]
+    
+    for datasplit in splits:
         data = json.load(open(join(dataroot, datasplit+".json")))
         formatted_dialogues = list()
         previous_id = ""
