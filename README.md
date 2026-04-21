@@ -7,7 +7,7 @@ This repository contains PyTorch code for NAACL 2022 paper: DialoKG: Knowledge-S
 
 
 ### ⚙️ Installation (anaconda)
-```commandline
+```python
 conda create -n dialokg -y python=3.7 && source activate dialokg
 pip install -r requirements.txt
 chmod +x setup.sh
